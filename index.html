@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		timeout
+	</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <meta name="author" content="phil@philwade.org"/>
+    <meta property="og:title" content="Timeout">
+    <meta property="og:description" content="A simple command line tool for managing your web productivity">
+    <meta property="og:url" content="http://timeout.philwade.org">
+    <meta name="twitter:site" content="@phil_wade">
+	<style>
+		h2 {
+			font-size: 3rem;
+		}
+	</style>
+</head>
+<body class="yellow lighten-5">
+    <div class="row">
+		<div class="col offset-m3 m6 s12">
+			<h1>timeout</h1>
+			<h2>A simple command line tool to help you stay productive</h2>
+			<p>Can't stay off twitter long enough to get stuff done? When you get bored of reddit do you try to go to reddit? Timeout might be helpful. Sure, you could try using your willpower, or manually block yourself using a host file, but both of those are annoying.
+			<p>timeout makes blocking unproductive websites easy. It uses your hostfile to make them inaccessible but allows provides an easy way to unblock them when you need to.
+			<h3>Installation</h3>
+			You can download the latest version of timeout for mac or linux from <a href="https://github.com/philwade/timeout/releases">here</a> or if you're using a mac you can install it with <a href="https://brew.sh/">homebrew</a>:
+			<div class="card yellow lighten-3">
+				<div class="card-content">
+					<pre>$ brew update</pre>
+					<pre>$ brew install philwade/tools/timeout</pre>
+				</div>
+			</div>
+			<h3>Usage</h3>
+			 Because of the nature of permissions on the hostfile, timeout requires you to run it with sudo. (Sorry.) To get started you need to add some sites to block. We specify a name and domains to block.
+			<div class="card yellow lighten-3">
+				<div class="card-content">
+					<pre>$ sudo timeout add twitter twitter.com www.twitter.com</pre>
+					<pre>Added site twitter with urls twitter.com, www.twitter.com to blocking</pre>
+					<pre>$ sudo timeout add reddit reddit.com www.reddit.com</pre>
+					<pre>Added site reddit with urls reddit.com, www.reddit.com to blocking</pre>
+				</div>
+			</div>
+			If we want to turn off blocking, just tell timeout it's time "in"
+			<div class="card yellow lighten-3">
+				<div class="card-content">
+					<pre>$ sudo timeout in</pre>
+					<pre>Unblocked all sites</pre>
+				</div>
+			</div>
+			To turn it back on, just run timeout again
+			<div class="card yellow lighten-3">
+				<div class="card-content">
+					<pre>$ sudo timeout</pre>
+					<pre>Blocked all sites</pre>
+				</div>
+			</div>
+			Turning off and on also works selectively, you just need to know the name of site(s).
+			<div class="card yellow lighten-3">
+				<div class="card-content">
+					<pre>$ sudo timeout in twitter</pre>
+					<pre>Unblocked sites: twitter</pre>
+					<pre>$ sudo timeout out twitter</pre>
+					<pre>Blocked sites: twitter</pre>
+					<pre>$ sudo timeout in twitter reddit</pre>
+					<pre>Blocked sites: twitter, reddit</pre>
+				</div>
+			</div>
+			For a reminder of how to use things just run:
+			<div class="card yellow lighten-3">
+				<div class="card-content">
+					<pre>$ timeout -h</pre>
+					or
+					<pre>$ timeout help</pre>
+				</div>
+			</div>
+			<h3>Other stuff</h3>
+			<p>timeout is open source software. If you find a bug or want to request a feature head over to <a href="https://github.com/philwade/timeout">github</a> and open an issue, or just read the code if you like.
+			<p>For more about me, contact info and other projects, head over to <a href="http://philwade.org">philwade.org</a>
+			</div>
+	</div>
+</body>
+</html>
