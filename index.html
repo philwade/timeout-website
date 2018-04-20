@@ -26,8 +26,8 @@
 		<div class="col offset-m3 m6 s12">
 			<h1>timeout</h1>
 			<h2>A simple command line tool to help you stay productive</h2>
-			<p>Can't stay off twitter long enough to get stuff done? When you get bored of reddit do you try to go to reddit? Timeout might be helpful. Sure, you could try using your willpower, or manually block yourself using a host file, but both of those are annoying.
-			<p>timeout makes blocking unproductive websites easy. It uses your hostfile to make them inaccessible but allows provides an easy way to unblock them when you need to.
+			<p>Can't stay off twitter long enough to get stuff done? When you get bored of reddit do you go to reddit? Timeout might help. Sure, you could try using willpower, or manually block yourself using a host file, but both of those are annoying.
+			<p>timeout makes blocking unproductive websites easy. It uses your hostfile to make them inaccessible but provides an easy way to unblock them when you want to.
 			<h3>Installation</h3>
 			You can download the latest version of timeout for mac or linux from <a href="https://github.com/philwade/timeout/releases">here</a> or if you're using a mac you can install it with <a href="https://brew.sh/">homebrew</a>:
 			<div class="card yellow lighten-3">
@@ -37,7 +37,8 @@
 				</div>
 			</div>
 			<h3>Usage</h3>
-			 Because of the nature of permissions on the hostfile, timeout requires you to run it with sudo. (Sorry.) To get started you need to add some sites to block. We specify a name and domains to block.
+			 Because of the nature of permissions on the hostfile, timeout requires you to run it with sudo. (Sorry!)
+			 <p>To get started you need to add some sites to block. We specify a name and domains to block:
 			<div class="card yellow lighten-3">
 				<div class="card-content">
 					<pre>$ sudo timeout add twitter twitter.com www.twitter.com</pre>
@@ -46,21 +47,21 @@
 					<pre>Added site reddit with urls reddit.com, www.reddit.com to blocking</pre>
 				</div>
 			</div>
-			If we want to turn off blocking, just tell timeout it's time "in"
+			If we want to turn off blocking, just tell timeout it's time "in":
 			<div class="card yellow lighten-3">
 				<div class="card-content">
 					<pre>$ sudo timeout in</pre>
 					<pre>Unblocked all sites</pre>
 				</div>
 			</div>
-			To turn it back on, just run timeout again
+			To turn it back on, just run timeout again:
 			<div class="card yellow lighten-3">
 				<div class="card-content">
 					<pre>$ sudo timeout</pre>
 					<pre>Blocked all sites</pre>
 				</div>
 			</div>
-			Turning off and on also works selectively, you just need to know the name of site(s).
+			Turning off and on also works selectively, you just need to know the name of site(s):
 			<div class="card yellow lighten-3">
 				<div class="card-content">
 					<pre>$ sudo timeout in twitter</pre>
@@ -84,5 +85,15 @@
 			<p>For more about me, contact info and other projects, head over to <a href="http://philwade.org">philwade.org</a>
 			</div>
 	</div>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117860639-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-117860639-1');
+	</script>
+
 </body>
 </html>
